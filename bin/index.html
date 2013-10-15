@@ -7,19 +7,22 @@
 	
 	<script src="js/base64v1_0.js"></script>
 	<script src="js/swfobject.js"></script>
-	
-	
 
 	<script>
+		//Update the URL with Base64 data from flash
 		function updateUrl(data) {
-			//data = B64.encode(data);
-			//data="ABC";
 			console.log(data);
 		}
 		
-		function readImage(url) {
+		//Error string returned from flash
+		function flashError(message) {
+		
+		}
+		
+		function encodeImage(url) {
+			//Get the SWF and process the image
 			var swf = document.getElementById("Base64EncodeAS3");
-			swf.readImage(url);
+			swf.encodeImage(url);
 		}	
 		
 		var flashvars = {
@@ -52,10 +55,10 @@
 		<p><a href="http://www.adobe.com/go/getflashplayer">Get Adobe Flash player</a></p>
 	</div>
 	<br/>
-	<button type="button" onclick="readImage('http://connect.dpreview.com/files/p/cms_posts/7739037780/nokia-lumia-1020-pro-highres-17.jpg')">Click Me!</button>
+	<button type="button" onclick="encodeImage('http://connect.dpreview.com/files/p/cms_posts/7739037780/nokia-lumia-1020-pro-highres-17.jpg')">Click Me!</button>
 
 	http://connect.dpreview.com/files/p/cms_posts/7739037780/nokia-lumia-1020-pro-highres-17.jpg
-	<button type="button" onclick="readImage('http://nrs.wsu.edu/Research/Bear-Center/images/mama_bear_with_cubsx.jpg')">Click Me!</button>
+	<button type="button" onclick="encodeImage('http://nrs.wsu.edu/Research/Bear-Center/images/mama_bear_with_cubsx.jpg')">Click Me!</button>
 
 </body>
 </html>

@@ -42,13 +42,13 @@ package
 			//For FireFox
 			Security.allowDomain("*");
 			removeEventListener(Event.ADDED_TO_STAGE, init);
-			ExternalInterface.addCallback("readImage", readImage)
+			ExternalInterface.addCallback("encodeImage", encodeImage)
 			
 		}
 		
-		protected function readImage(url:String):void
+		protected function encodeImage(url:String):void
 		{
-			trace("readImage()");
+			trace("encodeImage()");
 			//Set up a new loader
 			loader = new Loader();
 			//When it's complete do this
